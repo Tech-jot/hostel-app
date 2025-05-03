@@ -7,7 +7,21 @@
 </head>
 <body>
     <div id="sidebar-container"></div>
-  <main class="content">
+    <main class="content">
+      <h1>Allocate Room</h1>
+
+      <form class="form-box">
+        <label>Student Name:</label>
+        <input type="text" placeholder="Enter name">
+        <label>Room Number:</label>
+        <input type="text" placeholder="Enter room no.">
+        <button type="button" >Allocate</button>
+      </form>
+
+    </main>
+
+
+  <!-- <main class="content">
     <h1>Allocate Room</h1>
     <form class="form-box">
       <label>Student Name:</label>
@@ -16,7 +30,7 @@
       <input type="text" placeholder="Enter room no.">
       <button type="submit">Allocate</button>
     </form>
-  </main>
+  </main> -->
   <script>
     fetch('sidebar.html')
       .then(response => response.text())
