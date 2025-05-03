@@ -1,0 +1,68 @@
+<!-- hostel-rules.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hostel Rules - Hostel Management</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .sidebar {      
+      position: fixed;
+    }
+    
+  .content {
+    margin-left: 240px;
+    padding: 20px;
+    flex-grow: 1;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .rules-box {
+    background: #fff;
+    padding: 30px;
+    width: 100%;
+    max-width: 700px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .rules-box h2 {
+    margin-top: 0;
+  }
+  .rules-box ul {
+    padding-left: 20px;
+  }
+  .rules-box li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+  </style>
+</head>
+<body>
+    <div id="sidebar-container"></div>
+  <main class="content">
+    <div class="rules-box">
+      <h2>Hostel Rules & Regulations</h2>
+      <ul>
+        <li>Residents must return to the hostel by 9:00 PM.</li>
+        <li>Silence must be maintained in the hostel premises after 10:00 PM.</li>
+        <li>Keep your rooms clean and tidy at all times.</li>
+        <li>Visitors are only allowed between 4:00 PM to 7:00 PM and must be registered at the front desk.</li>
+        <li>Consumption of alcohol, drugs, or smoking is strictly prohibited.</li>
+        <li>Students must carry their ID cards at all times within the hostel.</li>
+        <li>Report any maintenance issues to the warden immediately.</li>
+        <li>Do not tamper with electrical installations or furniture.</li>
+      </ul>
+    </div>
+  </main>
+  <script>
+    fetch("sidebar.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("sidebar-container").innerHTML = data;
+      });
+  </script>
+</body>
+</html>

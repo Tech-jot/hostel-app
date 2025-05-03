@@ -1,0 +1,26 @@
+<!-- rooms.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rooms - Hostel Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="sidebar-container"></div>
+  <main class="content">
+    <h1>Room Availability</h1>
+    <table class="data-table">
+      <tr><th>Room No.</th><th>Status</th></tr>
+      <tr><td>101</td><td>Occupied</td></tr>
+      <tr><td>103</td><td>Available</td></tr>
+    </table>
+  </main>
+  <script>
+    fetch('sidebar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('sidebar-container').innerHTML = data;
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!-- feedback.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Feedback - Hostel Management</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        .sidebar {
+          position: fixed;
+        }
+  
+        .content {
+          margin-left: 240px;
+          padding: 20px;
+          flex-grow: 1;
+          background: #f4f4f4;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          min-height: 100vh;
+        }
+        .form-box {
+          background: #fff;
+          padding: 30px;
+          width: 100%;
+          max-width: 500px;
+          border-radius: 10px;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-box label {
+          display: block;
+          margin-bottom: 6px;
+          margin-top: 15px;
+          font-weight: bold;
+        }
+        .form-box input {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+        }
+        .form-box button {
+          margin-top: 20px;
+          padding: 10px 20px;
+          background: #007bff;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+          font-size: 16px;
+        }
+        .form-box button:hover {
+          background: #0056b3;
+        }
+      </style>
+  </head>
+  <body>
+    <div id="sidebar-container"></div>
+    <main class="content">
+      <h1>Feedback</h1>
+      <form class="form-box">
+        <label>Your Name:</label>
+        <input type="text" placeholder="Enter your name" />
+
+        <label>Feedback:</label>
+        <textarea placeholder="Write your feedback here..." rows="5"></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </main>
+
+    <!-- <main class="content">
+    <h1>Feedback</h1>
+    <form class="form-box">
+      <label>Your Name:</label>
+      <input type="text" placeholder="Enter your name">
+      <label>Feedback:</label>
+      <textarea placeholder="Write your feedback here..." rows="5"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </main> -->
+    <script>
+      fetch("sidebar.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("sidebar-container").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

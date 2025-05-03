@@ -1,0 +1,28 @@
+
+<!-- students.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Students - Hostel Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="sidebar-container"></div>
+  <main class="content">
+    <h1>Student List</h1>
+    <table class="data-table">
+      <tr><th>Name</th><th>Room No.</th><th>Status</th></tr>
+      <tr><td>Alice</td><td>101</td><td>Allocated</td></tr>
+      <tr><td>Bob</td><td>102</td><td>Allocated</td></tr>
+    </table>
+  </main>
+  <script>
+    fetch("sidebar.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("sidebar-container").innerHTML = data;
+      });
+  </script>
+</body>
+</html>
+
